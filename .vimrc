@@ -1,0 +1,4 @@
+" General stuff
+syntax on
+
+
