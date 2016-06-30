@@ -1,3 +1,22 @@
+"Required
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+call vundle#begin('$USERPROFILE/vimfiles/bundle/')
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()            " required
+
+"Enable type specific indentation
+filetype plugin indent on
+
 "Syntax highlighting
 let python_highlight_all=1
 syntax on
