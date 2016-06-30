@@ -32,5 +32,10 @@ set nu
 "System clipboards
 set clipboard=unnamed
 
-"Colour scheme
+"Backspace fix
+set backspace=indent,eol,start
+
+"Colourscheme
+colorscheme koehler
+
 
