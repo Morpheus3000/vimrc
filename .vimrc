@@ -12,10 +12,29 @@ call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+"Install Simpyl Fold folding plugin
+Plugin 'tmhedberg/SimpylFold'
+
+"Auto indentation for python that handles indentation for function signature
+"spanning multiple lines
+Plugin 'vim-scripts/indentpython.vim'
+
+"Syntax checking
+Plugin 'scrooloose/syntastic'
+
+"PEP8 Flaking
+Plugin 'nvie/vim-flake8'
+
+"Pretty powerbar
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+
 call vundle#end()            " required
 
 "Enable type specific indentation
 filetype plugin indent on
+
+"Enable docstrings for folded code
+let g:SimpylFold_docstring_preview=1
 
 "Syntax highlighting
 let python_highlight_all=1
