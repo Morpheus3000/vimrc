@@ -1,5 +1,10 @@
 "Required
 set nocompatible
+filetype off
+"Enable type specific indetation
+filetype indent on
+"Enable type specific indentation
+filetype plugin indent on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
@@ -39,9 +44,6 @@ Plugin 'honza/vim-snippets'
 "Molokai Colourscheme
 Plugin 'tomasr/molokai'
 
-"Super Undo Gundo
-Plugin 'sjl/gundo.vim'
-
 "Supertab
 "Plugin 'ervandew/supertab'
 
@@ -50,11 +52,6 @@ Plugin 'sjl/gundo.vim'
 "
 call vundle#end()            " required
 
-filetype off
-"Enable type specific indetation
-filetype indent on
-"Enable type specific indentation
-filetype plugin indent on
 
 "Enable docstrings for folded code
 let g:SimpylFold_docstring_preview=1
@@ -128,7 +125,7 @@ set incsearch
 set hlsearch
 
 "Turn off search highlights
-nnoremap <leader><space> nohlsearch<CR>
+nnoremap <leader><space> :nohlsearch<CR>
 
 "Move entire Line movements
 nnoremap <A-j> :m .+1<CR>==
@@ -139,42 +136,7 @@ vnoremap <A-j> :m '>+1<CR>gv==gv
 vnoremap <A-k> :m '<-2<CR>gv==gv
 
 "Enable Powerline
-set rtp+=C:\Users\morph\vimfiles\bundle\powerline\powerline\bindings\vim
 set laststatus=2
-set showtabline=1
-set noshowmode
-"set t_Co=256
-
-"Move between wrapped lines
-nnoremap j gj
-nnoremap k gk
-
-"Move to beginning and end of a line
-nnoremap B ^
-nnoremap E $
-
-"Highlight last inserted text
-nnoremap gV `[`v`]
-
-"Toggle Gundo
-nnoremap <leader>u :GundoToggle<CR>
-
-"Set custom leader
-let mapleader=","
-
-"Save session
-nnoremap <leader>s :mksession<CR>
-
-"SetUp UltiSnip
-let g:UltiSnipsExpandTrigger="<tab><tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-"Set Timeout to low, so that single tab isn't sluggish.
-set timeoutlen=200 ttimeoutlen=200
-
-"Set UltiSnipsEdit window to be Vertical by default
-let g:UltiSnipsEditSplit="Vertical"
 
 "Use 256 colour
 "set t_Co=256
